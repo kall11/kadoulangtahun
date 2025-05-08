@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tetris Game</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/consol.css" />
+  <link rel="stylesheet" href="../../assets/css/tetris.css" />
+</head>
+<body>
+  <div class="container" role="main" aria-label="Tetris Game">
+    <div class="game-area" id="gameArea">
+      <h1>Tetris</h1>
+      <div class="stats" aria-live="polite" aria-atomic="true">
+        <span>Score: <span id="score">0</span></span>
+        <span>Level: <span id="level">1</span></span>
+      </div>
+      <div class="stats-bottom" aria-live="polite" aria-atomic="true">
+        Lines: <span id="lines">0</span>
+      </div>
+      <div id="board" role="grid" aria-label="Tetris board" tabindex="0"></div>
+      <div class="controls" role="group" aria-label="Game controls">
+        <button id="leftBtn" class="btn-blue" aria-label="Move Left">&lt;</button>
+        <button id="rotateBtn" class="btn-blue btn-rotate" aria-label="Rotate">ROTATE</button>
+        <button id="rightBtn" class="btn-blue" aria-label="Move Right">&gt;</button>
+      </div>
+      <button id="startPauseBtn" class="btn-green" aria-label="Start Game">START GAME</button>
+    </div>
+    <button onclick="location.href='../consol/index.html'" id="backBtn" class="btn-red" aria-label="Back to previous menu" type="button">
+      <div></div><div></div><div></div>
+      <div></div><div></div><div></div>
+      <span class="btn-red-text">KEMBALI</span>
+    </button>
+
+    <!-- Game Over Overlay -->
+    <div id="gameOverOverlay" class="game-over-overlay" role="alert" aria-live="assertive" aria-modal="true" style="display:none;">
+      <div class="game-over-text">GAME OVER</div>
+      <button id="continueBtn" class="btn-continue" aria-label="Continue Game">CONTINUE</button>
+    </div>
+
+    <!-- Custom Message Overlay -->
+    <div id="messageOverlay" class="message-overlay" role="alert" aria-live="assertive" aria-modal="true" tabindex="0">
+      <strong>INGET YA!</strong>
+      <div>WALAU KAMU KALAH,<br> TAPI KAMU SELALU MENANG<br>KOK DI HATI AKU, HEHE ^_^</div>
+      <div class="pink-text">I LOVE YOU &lt;3</div>
+      <button id="messageContinueBtn" class="message-continue-btn" aria-label="Continue Playing">CONTINUE</button>
+    </div>
+  </div>
+
+  <script src="../../assets/js/consol.js"></script>
+  <script src="../../assets/js/tetris.js"></script>
+</body>
+</html>

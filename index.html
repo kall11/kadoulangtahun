@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kallzvy Birthday Surprise</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+  <div id="container" role="main" aria-label="Birthday surprise loading box">
+    <h1>Kallzvy</h1>
+    <div id="text-area" aria-live="polite" aria-atomic="true">
+      <div class="line">
+        <span class="symbol">&gt;</span>
+        <span id="line1">PREPARING BIRTHDAY</span>
+        <span class="cursor" aria-hidden="true">_</span>
+      </div>
+      <div class="line">
+        <span id="line2">SURPRISE...</span>
+      </div>
+    </div>
+    <div id="progress-bar" aria-label="Loading progress bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <div id="progress-fill">0%</div>
+    </div>
+    <p id="smile-text" aria-live="polite" tabindex="0" role="link" aria-label="Go to Consol page"onclick="location.href='./pages/consol/index.html'">SMILE!</p>
+  </div>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

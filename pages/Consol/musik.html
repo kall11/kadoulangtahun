@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Music Player</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/musik.css">
+</head>
+<body>
+  <div class="music-container">
+    <div class="music-player">
+      <h1>Music Player</h1>
+      <div class="player-display">
+        <img id="cover" alt="Album cover" class="album-cover">
+        <h2 id="title">Karena Kamu</h2>
+        <h3 id="artist">geisha</h3>
+        <input id="progress" type="range" min="0" max="100" value="0">
+        <div class="time-display">
+          <span id="currentTime">0:00</span>
+          <span id="duration">0:00</span>
+        </div>
+      </div>
+      <div class="player-controls">
+        <button id="prevBtn" aria-label="Previous"><i class="fas fa-backward"></i></button>
+        <button id="playBtn" aria-label="Play"><i class="fas fa-play"></i></button>
+        <button id="nextBtn" aria-label="Next"><i class="fas fa-forward"></i></button>
+      </div>
+      <button id="volumeBtn" aria-label="Volume"><i class="fas fa-volume-up"></i></button>
+      <div class="playlist">
+        <h4>PLAYLIST:</h4>
+        <ol id="playlist">
+          <li data-index="0"><span>Karena kamu</span></span><span>03:54</span></li>
+          <li data-index="1"><span>Mejaga Hati</span><span>03:09</span></li>
+          <li data-index="2"><span>Tanpa Cinta</span><span>03:28</span></li>
+          <li data-index="3"><span>Nothing's Gonna Change My Love For You</span><span>03:52</span></li>
+          <li data-index="4"><span>How Deep Is Your Love</span><span>03:58</span></li>
+        </ol>
+      </div>
+    </div>
+    <button class="nav-btn next-btn">SELANJUTNYA</button>
+    <button class="nav-btn back-btn">KEMBALI</button>
+  </div>
+
+  <audio id="audio"></audio>
+  <script src="../../../assets/js/musik.js"></script>
+</body>
+</html>
